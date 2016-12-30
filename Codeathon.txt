@@ -1,0 +1,6 @@
+Work on more advanced version for codeathon
+javascript, 4 basic html pages
+resource package
+tell the user what certain things are in the resource package
+
+change website to add navigation bar (email, donor, web application, codeathon download code link)
