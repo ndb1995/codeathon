@@ -19,7 +19,7 @@ KIND, either express or implied.  See the License for the
 specific language governing permissions and limitations
 under the License.
 -->
-<html ng-app="myModule">
+<html>
 
 <head>
   <meta charset="utf-8">
@@ -48,7 +48,7 @@ under the License.
 
 </head>
 
-<body class="welcome" ng-controller="AppCtrl">
+<body class="welcome">
 
   <!--p id="version">0.0.7</!--p-->
   <!--a class="close animated fadeInDown" href=""><img src="img/icons/close.png" alt="Close"></!--a>
@@ -67,9 +67,9 @@ under the License.
         <!--h3 ng-repeat="x in data" ng-if="x.collegeID == returnSchool()">{{x.collegeName}}</!--h3-->
         <p>Placing sexual assault resources into the hands of survivors and allies at New Hampshire colleges.</p>
         <a href="resources.html" id="enter">Enter</a>
-        <a href="index.html" id="change-school" onclick="myFunc()">Change School</a>
-        <a href="privacy.html" id="link">Privacy Policy</a>
-        <a href="terms.html" id="link">Terms of Use</a>
+        <a href="#" id="change-school">Change School</a>
+        <a href="#" id="link">Privacy Policy</a>
+        <a href="#" id="link">Terms of Use</a>
 
 
       </div>
@@ -81,8 +81,6 @@ under the License.
   <script src="js/index.js"></script>
   <script src="js/jquery-2.2.4.min.js"></script>
   <script src="js/main.js"></script>
-  <script src="js/angular.min.js"></script>
-  <script src="js/displayData.js"></script>
 
 </body>
 

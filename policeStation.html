@@ -45,8 +45,6 @@ under the License.
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,300,100,700">
 
-<script src="js/angular.min.js"></script>
-<script src="js/displayData.js"></script>
 </head>
 
 <body ng-controller="AppCtrl">
@@ -56,7 +54,7 @@ under the License.
 
   <div class="header">
     <div class="animated fadeInDown">
-      <p id="collegeHeader">University of New Hampshire Durham</p>
+      <p id="collegeHeader">University of New Hampshire (Durham)</p>
       <h1>Police Stations</h1>
     </div>
   </div>
@@ -70,15 +68,15 @@ under the License.
 
         <!-- resource start -->
 
-        <div class="resource">
+        <div class="resource dropdown dropdown-processed" id="dropdown-1">
 
           <!-- resource header & icon -->
 
-          <div class="list-item question" ng-click="showDetails = ! showDetails"><h1>Durham Police Department</h1></div>
+          <div class="list-item question dropdown-link"><h1>Durham Police Department</h1></div>
 
           <!-- resource data -->
 
-          <div ng-show="showDetails">
+          <div class="dropdown-container" style="display: none;">
 
             <!-- on or off campus -->
 
@@ -88,12 +86,12 @@ under the License.
             <!-- phone number -->
 
             <p class="resource-title"><img src="img/icons/phone.png" alt="Icon">Phone Number</p>
-            <a href="tel:{{x.policePhoneNumber}}" target="_blank"><p class="resource-content">603-868-2324</p></a>
+            <a href="tel:603-868-2324" target="_blank"><p class="resource-content">603-868-2324</p></a>
 
             <!-- location -->
 
             <p class="resource-title"><img src="img/icons/location.png" alt="Icon">Location</p>
-            <a href="http://maps.google.com/?q={{x.policeAddress}}" target="_blank"><p class="resource-content">86 Dover Road, Durham, NH 03824</p></a>
+            <a href="http://maps.google.com/?q=" target="_blank"><p class="resource-content">86 Dover Road, Durham, NH 03824</p></a>
 
           </div>
 
@@ -105,15 +103,15 @@ under the License.
 
         <!-- resource start -->
 
-        <div class="resource">
+        <div class="resource dropdown dropdown-processed" id="dropdown-2">
 
           <!-- resource header & icon -->
 
-          <div class="list-item question" ng-click="showDetails = ! showDetails"><h1>UNH Police Department</h1></div>
+          <div class="list-item question dropdown-link"><h1>UNH Police Department</h1></div>
 
           <!-- resource data -->
 
-          <div ng-show="showDetails">
+          <div class="dropdown-container" style="display: none;">
 
             <!-- On or off campus -->
             <p class="resource-title"><img src="img/icons/location.png" alt="Icon">Is it on or off campus?</p>
@@ -122,32 +120,32 @@ under the License.
             <!-- email -->
             <div>
               <p class="resource-title"><img src="img/icons/email.png" alt="Icon">Email</p>
-              <a href="{{x.csEmail}}" target="_blank"><p class="resource-content">http://www.unh.edu/upd/contact-us</p></a>
+              <a href="http://www.unh.edu/upd/contact-us" target="_blank"><p class="resource-content">http://www.unh.edu/upd/contact-us</p></a>
             </div>
 
             <!-- phone number -->
             <div>
               <p class="resource-title"><img src="img/icons/phone.png" alt="Icon">Phone Number</p>
-              <a href="tel:{{x.csPhoneNumber}}" target="_blank"><p class="resource-content"><b></b> 603-862-1427</p></a>
+              <a href="tel:" target="_blank"><p class="resource-content"><b></b> 603-862-1427</p></a>
             </div>
 
             <!-- location (if the location does appear on google maps, we want to link it-->
             <div>
               <p class="resource-title"><img src="img/icons/location.png" alt="Icon">Location</p>
-              <a href="http://maps.google.com/?q={{x.csLocation}}" target="_blank"><p class="resource-content">18 Waterworks Road Durham, NH 03824</p></a>
+              <a href="http://maps.google.com/?q=" target="_blank"><p class="resource-content">18 Waterworks Road Durham, NH 03824</p></a>
             </div>
 
 
             <!-- website -->
             <div ng-show="x.csWebsite">
               <p class="resource-title"><img src="img/icons/link.png" alt="Icon">Website</p>
-              <a href="{{x.csWebsite}}" target="_blank"><p class="resource-content">http://www.unh.edu/upd</p></a>
+              <a href="http://www.unh.edu/upd" target="_blank"><p class="resource-content">http://www.unh.edu/upd</p></a>
             </div>
             <!-- report online -->
             <div ng-show="x.csReportOnline1">
               <p class="resource-title"><img src="img/icons/link.png" alt="Icon">Report Online</p>
-              <a href="{{x.csReportOnline1}}" target="_blank"><p class="resource-content"><b>To UNH Police: </b> http://www.unh.edu/upd/anonymous-reporting</p></a>
-              <a href="{{x.csReportOnline2}}" target="_blank"><p class="resource-content"><b>To Title IX/Affirmative Action & Equity Office:</b> http://reportit.unh.edu/reportform.htm</p></a>
+              <a href="http://www.unh.edu/upd/anonymous-reporting" target="_blank"><p class="resource-content"><b>To UNH Police: </b>http://www.unh.edu/upd/anonymous-reporting</p></a>
+              <a href="http://reportit.unh.edu/reportform.htm" target="_blank"><p class="resource-content"><b>To Title IX/Affirmative Action & Equity Office: </b>http://reportit.unh.edu/reportform.htm</p></a>
             </div>
 
           </div>
@@ -164,7 +162,28 @@ under the License.
     <script src="js/index.js"></script>
     <script src="js/jquery-2.2.4.min.js"></script>
     <script src="js/main.js"></script>
+    <script>
+    $(document).ready(function(){
 
+      $('div.dropdown').each(function() {
+        var $dropdown = $(this);
+
+        $("div.dropdown-link", $dropdown).click(function(e) {
+          e.preventDefault();
+          $div = $("div.dropdown-container", $dropdown);
+          $div.toggle();
+          $("div.dropdown-container").not($div).hide();
+          return false;
+        });
+
+      });
+
+      $('html').click(function(){
+        $("div.dropdown-container").hide();
+      });
+
+    });
+    </script>
   </body>
 
   </html>
