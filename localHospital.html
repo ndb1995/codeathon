@@ -1,210 +1,210 @@
 <!DOCTYPE html>
 <!--
-    Copyright (c) 2012-2016 Adobe Systems Incorporated. All rights reserved.
+Copyright (c) 2012-2016 Adobe Systems Incorporated. All rights reserved.
 
-    Licensed to the Apache Software Foundation (ASF) under one
-    or more contributor license agreements.  See the NOTICE file
-    distributed with this work for additional information
-    regarding copyright ownership.  The ASF licenses this file
-    to you under the Apache License, Version 2.0 (the
-    "License"); you may not use this file except in compliance
-    with the License.  You may obtain a copy of the License at
+Licensed to the Apache Software Foundation (ASF) under one
+or more contributor license agreements.  See the NOTICE file
+distributed with this work for additional information
+regarding copyright ownership.  The ASF licenses this file
+to you under the Apache License, Version 2.0 (the
+"License"); you may not use this file except in compliance
+with the License.  You may obtain a copy of the License at
 
-    http://www.apache.org/licenses/LICENSE-2.0
+http://www.apache.org/licenses/LICENSE-2.0
 
-    Unless required by applicable law or agreed to in writing,
-    software distributed under the License is distributed on an
-    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-     KIND, either express or implied.  See the License for the
-    specific language governing permissions and limitations
-    under the License.
+Unless required by applicable law or agreed to in writing,
+software distributed under the License is distributed on an
+"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+KIND, either express or implied.  See the License for the
+specific language governing permissions and limitations
+under the License.
 -->
 <html ng-app="myModule">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="format-detection" content="telephone=yes">
-    <meta name="msapplication-tap-highlight" content="no">
-    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
-    <!-- This is a wide open CSP declaration. To lock this down for production, see below. -->
-    <!-- Good default declaration:
-    * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
-    * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
-    * Disables use of eval() and inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
-        * Enable inline JS: add 'unsafe-inline' to default-src
-        * Enable eval(): add 'unsafe-eval' to default-src
-    * Create your own at http://cspisawesome.com
-    -->
-    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: 'unsafe-inline' https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *" /> -->
+  <meta charset="utf-8">
+  <meta name="format-detection" content="telephone=yes">
+  <meta name="msapplication-tap-highlight" content="no">
+  <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+  <!-- This is a wide open CSP declaration. To lock this down for production, see below. -->
+  <!-- Good default declaration:
+  * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+  * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+  * Disables use of eval() and inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+  * Enable inline JS: add 'unsafe-inline' to default-src
+  * Enable eval(): add 'unsafe-eval' to default-src
+  * Create your own at http://cspisawesome.com
+-->
+<!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: 'unsafe-inline' https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *" /> -->
 
-    <!--link rel="stylesheet" type="text/css" href="css/index.css" /-->
+<!--link rel="stylesheet" type="text/css" href="css/index.css" /-->
 
-    <title>Local Hospitals</title>
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/animate.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,300,100,700">
+<title>Local Hospitals</title>
+<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/animate.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,300,100,700">
 
-  	<script src="js/angular.min.js"></script>
-  	<script src="js/displayData.js"></script>
+<script src="js/angular.min.js"></script>
+<script src="js/displayData.js"></script>
 </head>
 
 <body ng-controller="AppCtrl">
 
-    <a class="back animated fadeInDown" id="backButton" href="resources.html"><img src="img/icons/back.png" alt="Back"></a>
-    <a class="close" href=""><img src="img/icons/close.png" alt="Close"></a>
+  <a class="back animated fadeInDown" id="backButton" href="resources.html"><img src="img/icons/back.png" alt="Back"></a>
+  <a class="close" href=""><img src="img/icons/close.png" alt="Close"></a>
 
-    <div class="header">
-        <div class="animated fadeInDown">
-            <p id="collegeHeader">University of New Hampshire Durham</p>
-            <h1>Local Hospitals</h1>
-        </div>
+  <div class="header">
+    <div class="animated fadeInDown">
+      <p id="collegeHeader">University of New Hampshire Durham</p>
+      <h1>Local Hospitals</h1>
     </div>
+  </div>
 
-    <div class="wrapper">
+  <div class="wrapper">
 
-        <div class="list offset-160 animated fadeInLeft">
+    <div class="list offset-160 animated fadeInLeft">
 
-            <p id="screen-description" onclick="toggle_visibility('more');">The hospital can provide a range of services including conducting a full physical examination, offering emergency contraception to help prevent pregnancy, and offering medications to prevent HIV and many other sexually transmitted infections. <a id="learn-more" href="#">Learn more...</a>
-            <span id="more">Even if you do not think you have injuries, it is important to get medical care. During the exam, medical providers at the hospital can also collect evidence in case you want to report the assault to the police. This kind of evidence is most reliably collected within 72 hours; however, evidence collection kits can be done up to five days after an assault. It can be collected anonymously while you take some time to decide if you want to report to police. Medication to prevent HIV is most effective when taken 2-24 hours after exposure; though it can be given up to 72 hours after. The exam is free of charge and will not be billed to your insurance company. You can decline any part of the exam. If possible, avoid showering, bathing, using feminine hygiene products, urinating, defecating, washing your hands, or brushing your teeth before going to the hospital in order to preserve evidence. You may wish to bring a trusted friend or family member with you for support. A local crisis center advocate will be available to provide free, confidential emotional support, information, and resources throughout the process.</span></p>
+      <p id="screen-description" onclick="toggle_visibility('more');">The hospital can provide a range of services including conducting a full physical examination, offering emergency contraception to help prevent pregnancy, and offering medications to prevent HIV and many other sexually transmitted infections. <a id="learn-more" href="#">Learn more...</a>
+        <span id="more">Even if you do not think you have injuries, it is important to get medical care. During the exam, medical providers at the hospital can also collect evidence in case you want to report the assault to the police. This kind of evidence is most reliably collected within 72 hours; however, evidence collection kits can be done up to five days after an assault. It can be collected anonymously while you take some time to decide if you want to report to police. Medication to prevent HIV is most effective when taken 2-24 hours after exposure; though it can be given up to 72 hours after. The exam is free of charge and will not be billed to your insurance company. You can decline any part of the exam. If possible, avoid showering, bathing, using feminine hygiene products, urinating, defecating, washing your hands, or brushing your teeth before going to the hospital in order to preserve evidence. You may wish to bring a trusted friend or family member with you for support. A local crisis center advocate will be available to provide free, confidential emotional support, information, and resources throughout the process.</span></p>
 
-            <!-- resource start -->
+        <!-- resource start -->
 
-            <div class="resource dropdown dropdown-processed" id="dropdown-1">
+        <div class="resource dropdown dropdown-processed" id="dropdown-1">
 
-                <!-- resource header & icon -->
+          <!-- resource header & icon -->
 
-                <div class="list-item question dropdown-link"><h1>Wentworth-Douglass Hospital</h1></div>
+          <div class="list-item question dropdown-link"><h1>Wentworth-Douglass Hospital</h1></div>
 
-                <!-- resource data -->
+          <!-- resource data -->
 
-                <div class="dropdown-container" style="display: none;">
+          <div class="dropdown-container" style="display: none;">
 
-                    <!-- phone number -->
+            <!-- phone number -->
 
-                    <p class="resource-title"><img src="img/icons/phone.png" alt="Icon">Phone Number</p>
-                    <a href="tel:603-742-5252" target="_blank"><p class="resource-content">603-742-5252</p></a>
+            <p class="resource-title"><img src="img/icons/phone.png" alt="Icon">Phone Number</p>
+            <a href="tel:603-742-5252" target="_blank"><p class="resource-content">603-742-5252</p></a>
 
-                    <!-- location -->
+            <!-- location -->
 
-                    <p class="resource-title"><img src="img/icons/location.png" alt="Icon">Location</p>
-                    <a href="http://maps.google.com/?q=" target="_blank"><p class="resource-content">789 Central Ave., Dover, NH 03820</p></a>
+            <p class="resource-title"><img src="img/icons/location.png" alt="Icon">Location</p>
+            <a href="http://maps.google.com/?q=" target="_blank"><p class="resource-content">789 Central Ave., Dover, NH 03820</p></a>
 
-                    <!-- directions -->
+            <!-- directions -->
 
-                    <p class="resource-title"><img src="img/icons/link.png" alt="Icon">Directions</p>
-                    <a href="http://www.wdhospital.com/Contact" target="_blank"><p class="resource-content">http://www.wdhospital.com/Contact</p></a>
+            <p class="resource-title"><img src="img/icons/link.png" alt="Icon">Directions</p>
+            <a href="http://www.wdhospital.com/Contact" target="_blank"><p class="resource-content">http://www.wdhospital.com/Contact</p></a>
 
-                </div>
+          </div>
 
-            </div>
+        </div>
 
-            <!-- resource end -->
-			
+        <!-- resource end -->
 
-			<!-- resource start -->
 
-            <div class="resource dropdown dropdown-processed" id="dropdown-2">
+        <!-- resource start -->
 
-                <!-- resource header & icon -->
+        <div class="resource dropdown dropdown-processed" id="dropdown-2">
 
-                <div class="list-item question dropdown-link"><h1>Portsmouth Regional Hospital</h1></div>
+          <!-- resource header & icon -->
 
-                <!-- resource data -->
+          <div class="list-item question dropdown-link"><h1>Portsmouth Regional Hospital</h1></div>
 
-                <div class="dropdown-container" style="display: none;">
+          <!-- resource data -->
 
-                    <!-- phone number -->
+          <div class="dropdown-container" style="display: none;">
 
-                    <p class="resource-title"><img src="img/icons/phone.png" alt="Icon">Phone Number</p>
-                    <a href="tel:603-436-5110" target="_blank"><p class="resource-content">603-436-5110</p></a>
+            <!-- phone number -->
 
-                    <!-- location -->
+            <p class="resource-title"><img src="img/icons/phone.png" alt="Icon">Phone Number</p>
+            <a href="tel:603-436-5110" target="_blank"><p class="resource-content">603-436-5110</p></a>
 
-                    <p class="resource-title"><img src="img/icons/location.png" alt="Icon">Location</p>
-                    <a href="http://maps.google.com/?q=" target="_blank"><p class="resource-content">333 Borthwick Ave., Portsmouth, NH 03801</p></a>
+            <!-- location -->
 
-                    <!-- directions -->
+            <p class="resource-title"><img src="img/icons/location.png" alt="Icon">Location</p>
+            <a href="http://maps.google.com/?q=" target="_blank"><p class="resource-content">333 Borthwick Ave., Portsmouth, NH 03801</p></a>
 
-                    <p class="resource-title"><img src="img/icons/link.png" alt="Icon">Directions</p>
-                    <a href="http://portsmouthhospital.com/locations/" target="_blank"><p class="resource-content">http://portsmouthhospital.com/locations/</p></a>
+            <!-- directions -->
 
-                </div>
+            <p class="resource-title"><img src="img/icons/link.png" alt="Icon">Directions</p>
+            <a href="http://portsmouthhospital.com/locations/" target="_blank"><p class="resource-content">http://portsmouthhospital.com/locations/</p></a>
 
-            </div>
+          </div>
 
-            <!-- resource end -->
+        </div>
 
-			<!-- resource start -->
-			
-            <div class="resource dropdown dropdown-processed" id="dropdown-3">
+        <!-- resource end -->
 
-                <!-- resource header & icon -->
+        <!-- resource start -->
 
-                <div class="list-item question dropdown-link"><h1>Exeter Hospital</h1></div>
+        <div class="resource dropdown dropdown-processed" id="dropdown-3">
 
-                <!-- resource data -->
+          <!-- resource header & icon -->
 
-                <div class="dropdown-container" style="display: none;">
+          <div class="list-item question dropdown-link"><h1>Exeter Hospital</h1></div>
 
-                    <!-- phone number -->
+          <!-- resource data -->
 
-                    <p class="resource-title"><img src="img/icons/phone.png" alt="Icon">Phone Number</p>
-                    <a href="tel:603-778-7311" target="_blank"><p class="resource-content">603-778-7311</p></a>
+          <div class="dropdown-container" style="display: none;">
 
-                    <!-- location -->
+            <!-- phone number -->
 
-                    <p class="resource-title"><img src="img/icons/location.png" alt="Icon">Location</p>
-                    <a href="http://maps.google.com/?q=" target="_blank"><p class="resource-content">Exeter Hospital, 5 Alumni Dr., Exeter, NH 03833</p></a>
+            <p class="resource-title"><img src="img/icons/phone.png" alt="Icon">Phone Number</p>
+            <a href="tel:603-778-7311" target="_blank"><p class="resource-content">603-778-7311</p></a>
 
-                    <!-- directions -->
+            <!-- location -->
 
-                    <p class="resource-title"><img src="img/icons/link.png" alt="Icon">Directions</p>
-                    <a href="http://www.exeterhospital.com/locations/5-alumni-drive/" target="_blank"><p class="resource-content">http://www.exeterhospital.com/locations/5-alumni-drive/</p></a>
+            <p class="resource-title"><img src="img/icons/location.png" alt="Icon">Location</p>
+            <a href="http://maps.google.com/?q=" target="_blank"><p class="resource-content">Exeter Hospital, 5 Alumni Dr., Exeter, NH 03833</p></a>
 
-                </div>
+            <!-- directions -->
 
-            </div>
+            <p class="resource-title"><img src="img/icons/link.png" alt="Icon">Directions</p>
+            <a href="http://www.exeterhospital.com/locations/5-alumni-drive/" target="_blank"><p class="resource-content">http://www.exeterhospital.com/locations/5-alumni-drive/</p></a>
 
-            <!-- resource end -->
+          </div>
 
-			<!-- resource start -->
+        </div>
 
-            <div class="resource dropdown dropdown-processed" id="dropdown-4">
+        <!-- resource end -->
 
-                <!-- resource header & icon -->
+        <!-- resource start -->
 
-                <div class="list-item question dropdown-link"><h1>Frisbie Memorial Hospital</h1></div>
+        <div class="resource dropdown dropdown-processed" id="dropdown-4">
 
-                <!-- resource data -->
+          <!-- resource header & icon -->
 
-                <div class="dropdown-container" style="display: none;">
+          <div class="list-item question dropdown-link"><h1>Frisbie Memorial Hospital</h1></div>
 
-                    <!-- phone number -->
+          <!-- resource data -->
 
-                    <p class="resource-title"><img src="img/icons/phone.png" alt="Icon">Phone Number</p>
-                    <a href="tel:603-332-5211" target="_blank"><p class="resource-content">603-332-5211</p></a>
+          <div class="dropdown-container" style="display: none;">
 
-                    <!-- location -->
+            <!-- phone number -->
 
-                    <p class="resource-title"><img src="img/icons/location.png" alt="Icon">Location</p>
-                    <a href="http://maps.google.com/?q=" target="_blank"><p class="resource-content">11 Whitehall Rd, Rochester, NH 03867</p></a>
+            <p class="resource-title"><img src="img/icons/phone.png" alt="Icon">Phone Number</p>
+            <a href="tel:603-332-5211" target="_blank"><p class="resource-content">603-332-5211</p></a>
 
-                    <!-- directions -->
+            <!-- location -->
 
-                    <p class="resource-title"><img src="img/icons/link.png" alt="Icon">Directions</p>
-                    <a href="http://www.frisbiehospital.com/patients-and-visitors/directions-maps-parking/" target="_blank"><p class="resource-content">http://www.frisbiehospital.com/patients-and-visitors/directions-maps-parking/</p></a>
+            <p class="resource-title"><img src="img/icons/location.png" alt="Icon">Location</p>
+            <a href="http://maps.google.com/?q=" target="_blank"><p class="resource-content">11 Whitehall Rd, Rochester, NH 03867</p></a>
 
-                </div>
+            <!-- directions -->
 
-            </div>
+            <p class="resource-title"><img src="img/icons/link.png" alt="Icon">Directions</p>
+            <a href="http://www.frisbiehospital.com/patients-and-visitors/directions-maps-parking/" target="_blank"><p class="resource-content">http://www.frisbiehospital.com/patients-and-visitors/directions-maps-parking/</p></a>
 
-            <!-- resource end -->
+          </div>
 
+        </div>
 
-		  </div>
+        <!-- resource end -->
+
 
       </div>
+
+    </div>
 
     <script src="cordova.js"></script>
     <script src="js/index.js"></script>
@@ -212,34 +212,34 @@
     <script src="js/main.js"></script>
     <script src="js/dropdown.js"></script>
     <script src="js/readmore.min.js"></script>
-	<script>
-	$(document).ready(function(){
-
-	  $('div.dropdown').each(function() {
-		var $dropdown = $(this);
-
-			$("div.dropdown-link", $dropdown).click(function(e) {
-			  e.preventDefault();
-			  $div = $("div.dropdown-container", $dropdown);
-			  $div.toggle();
-			  $("div.dropdown-container").not($div).hide();
-			  return false;
-			});
-
-		});
-		
-	  $('html').click(function(){
-		$("div.dropdown-container").hide();
-	  });
-		 
-	});
-	</script>
     <script>
-		$('article').readmore({
-		  speed: 75,
-		  lessLink: '<a href="#">Read less</a>'
-		});
-    </script>
-</body>
+    $(document).ready(function(){
 
-</html>
+      $('div.dropdown').each(function() {
+        var $dropdown = $(this);
+
+        $("div.dropdown-link", $dropdown).click(function(e) {
+          e.preventDefault();
+          $div = $("div.dropdown-container", $dropdown);
+          $div.toggle();
+          $("div.dropdown-container").not($div).hide();
+          return false;
+        });
+
+      });
+
+      $('html').click(function(){
+        $("div.dropdown-container").hide();
+      });
+
+    });
+    </script>
+    <script>
+    $('article').readmore({
+      speed: 75,
+      lessLink: '<a href="#">Read less</a>'
+    });
+    </script>
+  </body>
+
+  </html>
