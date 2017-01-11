@@ -8,3 +8,9 @@ change website to add navigation bar (email, donor, web application, codeathon d
 Get rid of animation css, .blink from index.css, add crisis center (everything that isnt police, crisis center, hospital, send to a placeholder page)
 
 January 9th get w3 css working, start with the resources page without animation
+
+complete four pages in next week
+meeting at manchester wednesday 4:30pm
+
+https://validator.w3.org/
+fontawesome.io
