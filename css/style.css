@@ -520,3 +520,8 @@ input {
 [ng\:cloak], [ng-cloak], .ng-cloak {
   display: none !important;
 }
+
+.leftImages {
+   float: left;
+   margin-right: 1.5em;
+}
