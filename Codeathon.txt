@@ -1,16 +1,2 @@
-Work on more advanced version for codeathon
-javascript, 4 basic html pages
-resource package
-tell the user what certain things are in the resource package
-
-change website to add navigation bar (email, donor, web application, codeathon download code link)
-
-Get rid of animation css, .blink from index.css, add crisis center (everything that isnt police, crisis center, hospital, send to a placeholder page)
-
-January 9th get w3 css working, start with the resources page without animation
-
-complete four pages in next week
-meeting at manchester wednesday 4:30pm
-
 https://validator.w3.org/
 fontawesome.io
