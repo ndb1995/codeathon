@@ -1,0 +1,49 @@
+.welcome-background{
+  background:#008081;
+}
+
+.welcome-usafenh-text{
+  font-size:40px;
+  color:white;
+}
+
+.welcome-welcome-text{
+  font-weight: bold;
+  font-size:16px;
+  color:#003a3b;
+}
+
+.welcome-description{
+  font-weight:300;
+  font-size:20px;
+  color:#d4ebeb;
+}
+
+.welcome-change-location{
+  color:#98c8c9;
+}
+
+.welcome-link{
+  color:#dee7e7;
+}
+
+.header{
+  background:#008081;
+  color:white;
+}
+
+.ul-width{
+  width:30%;
+}
+
+ul a{
+  text-decoration: none;
+}
+
+ul img{
+  width:5%
+}
+
+.information-header{
+  font-weight: bold;
+}
