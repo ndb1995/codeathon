@@ -590,3 +590,7 @@ other selectors that are more specific or come later and might alter display.
 #welcome-desc{
   font-size: 110%;
 }
+
+.change-campus-color{
+  color:#98c8c9;
+}
