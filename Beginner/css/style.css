@@ -9,7 +9,7 @@
 
 .welcome-welcome-text{
   font-weight: bold;
-  font-size:16px;
+  font-size:18px;
   color:#003a3b;
 }
 
@@ -61,4 +61,9 @@ ul img{
 .button{
   height:100px;
   width:200px;
+}
+
+.backButton {
+  height:20px;
+  width:20px;
 }
